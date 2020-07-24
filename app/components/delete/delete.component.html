@@ -1,0 +1,19 @@
+<div class="mt-3" *ngIf="result==1">
+    <div class="box mt-3">
+        <div class="alert alert-warning" role="alert">
+            <h4 class="alert-heading">Deleted successfully</h4>
+            <li class="list-group-item mt-2">
+                <img src={{deleted.data.avatar}} alt={{deleted.data.first_name}}>
+             <span class="ml-3"><b>{{deleted.data.first_name}} {{deleted.data.last_name}}</b></span> 
+             <span class="ml-5"><b>{{deleted.data.email}}</b></span>
+             </li>
+             <p>it will close in <b>5</b>s</p>
+          </div>
+    </div>
+</div>
+<div class="container mt-3">
+    <br>
+    <input type="text" class="form-control mt-3" placeholder="ID...." [(ngModel)]="_id" required>
+    <input type="submit" (click)="deleteData()" class="btn btn-primary mt-3" value="delete Data">
+    <br><br>
+</div>

@@ -1,0 +1,18 @@
+<div *ngIf="loading==1">
+   <div class="container">
+    <i id="loading" class="fa fa-spinner fa-pulse fa-4x"></i>
+   </div>
+</div>
+<div *ngIf="loading==0">
+ <div class="container">
+    <ul class="list-group">
+        <div *ngFor='let emp of display_list'>
+            <li class="list-group-item mt-2">
+               <img src={{emp.avatar}} alt={{emp.first_name}}>
+            <span class="ml-3"><b>{{emp.first_name}} {{emp.last_name}}</b></span> 
+            <span class="ml-5"><b>{{emp.email}}</b></span>
+            </li>
+        </div>         
+        </ul>
+ </div>
+</div>
